@@ -22,3 +22,13 @@
   text-align: center;
   box-shadow: 2px 2px 3px rgba(0,0,0, 0.2) ;
 }
+body {
+  background-image: url(background.jpg);
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+#game {
+  height: 90vh;
+}

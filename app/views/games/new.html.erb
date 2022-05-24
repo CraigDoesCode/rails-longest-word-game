@@ -1,17 +1,21 @@
-<h2 class="text-center">New Game</h2>
-<div class="container d-flex justify-content-between">
-  <% @letters.each do |letter| %>
-    <div class="letter d-flex justify-content-center align-items-center">
-      <p class="text-center"><%= letter %></p>
+<div class="container d-flex justify-content-center align-items-center" id="game">
+  <div class="container">
+    <h2 class="text-center">New Game</h2>
+    <div class="container d-flex justify-content-between">
+      <% @letters.each do |letter| %>
+        <div class="letter d-flex justify-content-center align-items-center">
+          <p class="text-center"><%= letter %></p>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
 
-<form class="container my-3 text-center" action="score" method="POST" data-turbo="false">
-  <label for="guess">What is the longest word you can find?</label>
-  <input type="text" class="form-control" name="guess" id="guess">
-  <input type="submit" class="my-3 btn btn-primary" value="Play">
-  <%= hidden_field_tag :letters, @letters %>
-  <%= hidden_field_tag :start_time, Time.now %>
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-</form>
+    <form class="container my-3 text-center" action="score" method="POST" data-turbo="false">
+      <label for="guess">What is the longest word you can find?</label>
+      <input type="text" class="form-control" name="guess" id="guess">
+      <input type="submit" class="my-3 btn btn-primary" value="Play">
+      <%= hidden_field_tag :letters, @letters %>
+      <%= hidden_field_tag :start_time, Time.now %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    </form>
+  </div>
+</div>
