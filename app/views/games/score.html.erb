@@ -1,3 +1,9 @@
-<h2>Result</h2>
-<p><%= @result %></p>
-<%= link_to 'Play again', root_path %>
+<div class="container d-flex justify-content-center align-items-center" id='game'>
+  <div class="container justify-content-center">
+    <h2 class="text-center">Result</h2>
+    <p class="text-center"><%= @result %></p>
+    <div class= "d-flex justify-content-center align-items-center">
+    <%= link_to 'Play again', root_path, class: 'btn btn-primary mx-auto'%>
+    </div>
+  </div>
+</div>
